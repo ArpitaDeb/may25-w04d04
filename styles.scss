@@ -1,0 +1,92 @@
+@import '_variables';
+
+@mixin header-styles {
+  color: brown;
+  text-decoration: underline;
+}
+
+@mixin argument($num) {
+  font-size: $num;
+  height: 2 * $num;
+}
+
+@mixin box-sizes($n) {
+  height: $n;
+  width: $n;
+  line-height: $n;
+}
+
+.box {
+  @include box-sizes(50px);
+  border: 1px solid green;
+}
+
+body {
+  // @include header-styles();
+  @include argument(20px);
+  flex-direction: row;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 50px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+header {
+  height: 160px;
+  background-color: coral;
+}
+
+.another-style {
+  @extend header;
+  text-decoration: underline;
+}
+
+section {
+  border: $borders;
+  font-size: 100px;
+
+  &.content {
+    color: blue;
+  }
+
+  div {
+    height: 50vw;
+    width: 25vw;
+    margin: 20px;
+    min-width: 130px;
+    display: inline-block;
+    background-color: lightpink;
+    text-align: center;
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+footer {
+  background-color: burlywood;
+  height: 150px;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-color: $primary-color;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: darkgoldenrod;
+  }
+}

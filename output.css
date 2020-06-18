@@ -1,0 +1,51 @@
+body {
+  font-size: 20px;
+  height: 40px;
+  flex-direction: row; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 50px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 25px; }
+
+header, .another-style {
+  height: 160px;
+  background-color: coral; }
+
+.another-style {
+  text-decoration: underline; }
+
+section {
+  border: 2px dotted lightgrey;
+  font-size: 100px; }
+  section.content {
+    color: blue; }
+  section div {
+    height: 50vw;
+    width: 25vw;
+    margin: 20px;
+    min-width: 130px;
+    display: inline-block;
+    background-color: lightpink;
+    text-align: center; }
+    section div p {
+      font-size: 24px; }
+
+footer {
+  background-color: burlywood;
+  height: 150px; }
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-color: blue; } }
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: darkgoldenrod; } }
+
+/*# sourceMappingURL=output.css.map */
